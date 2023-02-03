@@ -1,0 +1,20 @@
+package com.xuecheng.learning.feignclient;
+
+import com.xuecheng.base.model.RestResponse;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.openfeign.FallbackFactory;
+import org.springframework.stereotype.Component;
+@Slf4j
+@Component
+public class MediaServiceClientFallbackFactory implements FallbackFactory<MediaServiceClient> {
+    @Override
+    public MediaServiceClient create(Throwable cause) {
+        return new MediaServiceClient() {
+            @Override
+            public RestResponse<String> previewByFileId(String fileId) {
+                log.error("远程调用媒资管理服务熔断降级：：{}",cause.getMessage());
+                return null;
+            }
+        };
+    }
+}

@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class QueryCourseParamDto {
 
-    private String name;
+    private String courseName;
 
-    private  String audistate;
+    private  String auditStatus;
+
+    private  String publishStatus;
 
 }

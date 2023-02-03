@@ -1,8 +1,0 @@
-
-spring:
-  application:
-    name: xuecheng-context-api
-
-
-server:
-  port: 6030

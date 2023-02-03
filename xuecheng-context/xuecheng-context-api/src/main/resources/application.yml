@@ -1,0 +1,49 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xuecheng?serverTimezone=Asia/Shanghai
+    username: root
+    password: dx1234love
+    hikari:
+      auto-commit: false
+  application:
+    name: xuecheng-context
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: com.xuecheng
+  redis:
+    host: 192.168.159.128
+    port: 6379
+    password: redis
+    database: 0
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 10
+        min-idle: 0
+    timeout: 10000
+server:
+  port: 6010
+
+
+logging:
+  level:
+    com:
+      xuecheng:
+        context:
+          dao: debug
+xxl:
+  job:
+    admin:
+      addresses: http://localhost:6050/xxl-job-admin
+    executor:
+      appname: coursepublish-job
+      address:
+      ip:
+      port: 8999
+      logpath: /data/applogs/xxl-job/jobhandler
+      logretentiondays: 30
+    accessToken: default_token

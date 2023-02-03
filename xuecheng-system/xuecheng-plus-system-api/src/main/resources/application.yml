@@ -1,0 +1,15 @@
+
+server:
+  port: 63110
+#微服务配置
+spring:
+  application:
+    name: xuecheng-system-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xuecheng_system?serverTimezone=Asia/Shanghai
+    username: root
+    password: dx1234love
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
