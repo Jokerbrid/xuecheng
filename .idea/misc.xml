@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ASMPluginConfiguration">
+    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.apache.ibatis.annotations.Mapper" />
+    </list>
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/xuecheng-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-base/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-context/xuecheng-context-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-context/xuecheng-context-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-context/xuecheng-context-model/pom.xml" />
+        <option value="$PROJECT_DIR$/EntityGenarator/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-system/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-media/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-Getway/pom.xml" />
+        <option value="$PROJECT_DIR$/xxl-job-2.3.1/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-message-sdk/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-checkcode/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-learning/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-learning/xuecheng-learning-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-learning/xuecheng-learning-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-learning/xuecheng-learning-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-pay/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-pay/xuecheng-pay-api/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-pay/xuecheng-pay-model/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-pay/xuecheng-pay-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-context/pom.xml" />
+        <option value="$PROJECT_DIR$/xuecheng-media/xuecheng-plus-media-service/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/xxl-job-2.3.1/xxl-job-executor-samples/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

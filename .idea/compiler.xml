@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xxl-job-core" />
+        <module name="xuecheng-learning-api" />
+        <module name="xuecheng-plus-media-api" />
+        <module name="xuecheng-pay-model" />
+        <module name="xuecheng-context-model" />
+        <module name="EntityGenarator" />
+        <module name="xuecheng-pay-service" />
+        <module name="xuecheng-plus-media-service" />
+        <module name="xuecheng-learning-model" />
+        <module name="xuecheng-plus-media-model" />
+        <module name="xuecheng-plus-system-service" />
+        <module name="xuecheng-Getway" />
+        <module name="xuecheng-learning-service" />
+        <module name="xuecheng-base" />
+        <module name="xuecheng-plus-system-model" />
+        <module name="xuecheng-plus-system-api" />
+        <module name="xuecheng-message-sdk" />
+        <module name="xuecheng-checkcode" />
+        <module name="xuecheng-context-api" />
+        <module name="xuecheng-auth" />
+        <module name="xuecheng-pay-api" />
+        <module name="xxl-job-admin" />
+        <module name="xuecheng-context-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EntityGenarator" target="1.8" />
+      <module name="xuecheng-auth" target="1.8" />
+      <module name="xuecheng-base" target="1.8" />
+      <module name="xuecheng-checkcode" target="1.8" />
+      <module name="xuecheng-context" target="1.8" />
+      <module name="xuecheng-context-api" target="1.8" />
+      <module name="xuecheng-context-model" target="1.8" />
+      <module name="xuecheng-context-service" target="1.8" />
+      <module name="xuecheng-Getway" target="1.8" />
+      <module name="xuecheng-learning" target="1.8" />
+      <module name="xuecheng-learning-api" target="1.8" />
+      <module name="xuecheng-learning-model" target="1.8" />
+      <module name="xuecheng-learning-service" target="1.8" />
+      <module name="xuecheng-media" target="1.8" />
+      <module name="xuecheng-message-sdk" target="1.8" />
+      <module name="xuecheng-nacos" target="1.8" />
+      <module name="xuecheng-parent" target="1.8" />
+      <module name="xuecheng-pay" target="1.8" />
+      <module name="xuecheng-pay-api" target="1.8" />
+      <module name="xuecheng-pay-model" target="1.8" />
+      <module name="xuecheng-pay-service" target="1.8" />
+      <module name="xuecheng-plus-media-api" target="1.8" />
+      <module name="xuecheng-plus-media-model" target="1.8" />
+      <module name="xuecheng-plus-media-service" target="1.8" />
+      <module name="xuecheng-plus-message-sdk" target="1.8" />
+      <module name="xuecheng-plus-system-api" target="1.8" />
+      <module name="xuecheng-plus-system-model" target="1.8" />
+      <module name="xuecheng-plus-system-service" target="1.8" />
+      <module name="xuecheng-system" target="1.8" />
+      <module name="xxl-job" target="1.8" />
+      <module name="xxl-job-admin" target="1.8" />
+      <module name="xxl-job-core" target="1.8" />
+      <module name="xxl-job-executor-sample-frameless" target="1.8" />
+      <module name="xxl-job-executor-sample-springboot" target="1.8" />
+      <module name="xxl-job-executor-samples" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EntityGenarator" options="-parameters" />
+      <module name="xuecheng-Getway" options="-parameters" />
+      <module name="xuecheng-auth" options="-parameters" />
+      <module name="xuecheng-base" options="-parameters" />
+      <module name="xuecheng-checkcode" options="-parameters" />
+      <module name="xuecheng-context" options="" />
+      <module name="xuecheng-context-api" options="-parameters" />
+      <module name="xuecheng-context-model" options="-parameters" />
+      <module name="xuecheng-context-service" options="-parameters" />
+      <module name="xuecheng-learning" options="" />
+      <module name="xuecheng-learning-api" options="-parameters" />
+      <module name="xuecheng-learning-model" options="-parameters" />
+      <module name="xuecheng-learning-service" options="-parameters" />
+      <module name="xuecheng-media" options="" />
+      <module name="xuecheng-message-sdk" options="-parameters" />
+      <module name="xuecheng-nacos" options="-parameters" />
+      <module name="xuecheng-parent" options="" />
+      <module name="xuecheng-pay" options="" />
+      <module name="xuecheng-pay-api" options="-parameters" />
+      <module name="xuecheng-pay-model" options="-parameters" />
+      <module name="xuecheng-pay-service" options="-parameters" />
+      <module name="xuecheng-plus-media-api" options="-parameters" />
+      <module name="xuecheng-plus-media-model" options="-parameters" />
+      <module name="xuecheng-plus-media-service" options="-parameters" />
+      <module name="xuecheng-plus-message-sdk" options="-parameters" />
+      <module name="xuecheng-plus-system-api" options="-parameters" />
+      <module name="xuecheng-plus-system-model" options="-parameters" />
+      <module name="xuecheng-plus-system-service" options="-parameters" />
+      <module name="xuecheng-system" options="" />
+    </option>
+  </component>
+</project>
