@@ -48,7 +48,7 @@ Xshell
 
 ### 涉及到的模块共有：
 
-​	[基础的内容显示模块](./doc/projectDoc/content.md)
+​	[内容模块](./doc/projectDoc/content.md)
 
 ​	[支付模块](./doc/projectDoc/pay.md)
 
@@ -58,7 +58,9 @@ Xshell
 
 ​	[学习中心模块](./doc/projectDoc/learn.md)
 
-​	
+​	[登录模块](./doc/projectDoc/auth.md)
+
+​	点击查看各各模块的设计。
 
 ### 基础模块的依赖关系：
 
