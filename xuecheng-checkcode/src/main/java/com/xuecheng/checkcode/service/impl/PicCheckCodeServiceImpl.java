@@ -21,7 +21,7 @@ import java.io.IOException;
  * @description 图片验证码生成器
  * @date 2022/9/29 16:16
  */
-@Service("PicCheckCodeService")
+@Service("picCheckCodeService")
 public class PicCheckCodeServiceImpl extends AbstractCheckCodeService implements CheckCodeService {
 
 

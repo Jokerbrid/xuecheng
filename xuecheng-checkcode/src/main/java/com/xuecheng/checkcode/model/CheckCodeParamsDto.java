@@ -2,8 +2,6 @@ package com.xuecheng.checkcode.model;
 
 import lombok.Data;
 
-import java.util.Map;
-
 /**
  * @author Mr.M
  * @version 1.0
@@ -22,6 +20,6 @@ public class CheckCodeParamsDto {
      * 业务携带参数
      */
     private String param1;
-    private String param2;
+    private String email;//邮箱地址
     private String param3;
 }

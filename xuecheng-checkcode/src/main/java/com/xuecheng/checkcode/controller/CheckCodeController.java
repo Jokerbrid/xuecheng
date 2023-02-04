@@ -3,11 +3,12 @@ package com.xuecheng.checkcode.controller;
 import com.xuecheng.checkcode.model.CheckCodeParamsDto;
 import com.xuecheng.checkcode.model.CheckCodeResultDto;
 import com.xuecheng.checkcode.service.CheckCodeService;
+import com.xuecheng.checkcode.service.impl.MemoryCheckCodeStore;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.Resource;
 
 /**
  * @author Mr.M
@@ -19,19 +20,39 @@ import javax.annotation.Resource;
 @RestController
 public class CheckCodeController {
 
-    @Resource(name = "PicCheckCodeService")
-    private CheckCodeService picCheckCodeService;
+    @Autowired
+    ApplicationContext applicationContext;
 
+    @Autowired
+    MemoryCheckCodeStore memoryCheckCodeStore;
 
     @PostMapping(value = "/pic")
     public CheckCodeResultDto generatePicCheckCode(CheckCodeParamsDto checkCodeParamsDto){
-        return picCheckCodeService.generate(checkCodeParamsDto);
+        //图片验证码：
+        CheckCodeService service = applicationContext.getBean(checkCodeParamsDto.getCheckCodeType() + "CheckCodeService", CheckCodeService.class);
+        return service.generate(checkCodeParamsDto);
     }
 
 
     @PostMapping(value = "/verify")
-    public Boolean verify(@RequestParam String key,@RequestParam String code){
-        Boolean isSuccess = picCheckCodeService.verify(key,code);
+    public Boolean verify( String key,@RequestParam String code){
+
+        if(key==null){
+            //说明是sms验证码/邮箱验证码：
+            CheckCodeService service = applicationContext.getBean("mailCheckCodeService", CheckCodeService.class);
+            return service.verify(null, code);
+
+
+        }
+        //图片验证码：
+        CheckCodeService service = applicationContext.getBean("picCheckCodeService", CheckCodeService.class);
+        Boolean isSuccess = service.verify(key,code);
         return isSuccess;
+    }
+    @PostMapping(value = "/mail")
+    public void generateMailCheckCode( CheckCodeParamsDto checkCodeParamsDto){
+        //图片验证码：
+        CheckCodeService service = applicationContext.getBean(checkCodeParamsDto.getCheckCodeType() + "CheckCodeService", CheckCodeService.class);
+        service.generate(checkCodeParamsDto);
     }
 }
