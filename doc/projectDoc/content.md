@@ -6,7 +6,7 @@
 
 课程基本表：
 
-![](..\img\couse_base.png)
+![](../img/couse_base.png)
 
 
 
@@ -36,13 +36,13 @@ response: PageResult<CourseBase>
 
 结果：
 
-![](..\img\content-page-postman-res.png)
+![](../img/content-page-postman-res.png)
 
 
 
 ### 新建课程：
 
-![](..\img\course-insert-1.png)
+![](../img/course-insert-1.png)
 
 新建课程需要填写课程基本表，课程营销计划表，课程计划，课程老师涉及到多个表的插入数据因此将步骤拆分成多个插入计划。
 
@@ -69,6 +69,8 @@ response: PageResult<CourseBase>
 
 
 ### 发布课程：
+
+
 
 
 

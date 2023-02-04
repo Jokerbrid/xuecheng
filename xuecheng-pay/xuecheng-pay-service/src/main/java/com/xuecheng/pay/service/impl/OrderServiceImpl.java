@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.xuecheng.base.util.IdWorkerUtils;
+import com.xuecheng.messagesdk.service.MqMessageService;
+import com.xuecheng.pay.config.PayNotifyConfig;
 import com.xuecheng.pay.mapper.XcOrdersGoodsMapper;
 import com.xuecheng.pay.mapper.XcOrdersMapper;
 import com.xuecheng.pay.mapper.XcPayRecordMapper;
@@ -35,6 +37,9 @@ public class OrderServiceImpl implements OrderService {
     XcOrdersGoodsMapper xcOrdersGoodsMapper;
     @Autowired
     XcPayRecordMapper xcPayRecordMapper;
+    @Autowired
+    MqMessageService mqMessageService;
+
 
     @Transactional
     @Override
@@ -98,6 +103,9 @@ public class OrderServiceImpl implements OrderService {
                         if (update > 0) {
                             log.info("收到支付通知,更新订单状态成功,支付交易流水号:{},支付结果:{},订单号:{},状态:{}"
                                     , payNo, trade_status, orderId, "600002");
+
+                            //写入消息队列：
+                            mqMessageService.addMessage(PayNotifyConfig.message_type,orders.getOutBusinessId(), orders.getOrderType(), null);
                         } else {
                             log.error("收到支付通知,更新订单状态失败,支付交易流水号:{},支付结果:{},订单号:{},状态:{}"
                                     , payNo, trade_status, orderId, "600002");

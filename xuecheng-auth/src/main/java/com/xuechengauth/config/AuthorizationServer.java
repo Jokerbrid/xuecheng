@@ -39,7 +39,7 @@ public class AuthorizationServer extends AuthorizationServerConfigurerAdapter {
                 .withClient("xcWebApp")
                 .secret("xcWebApp")
                 .secret( passwordEncoder.encode("xcWebApp")) //客户端密钥
-                .resourceIds("res_content_1","res_learing_1")//资源列表
+                .resourceIds("res_content_1","res_learing_1","res_pay_1")//资源列表
                 .authorizedGrantTypes("authorization_code", "password","client_credentials","implicit","refresh_token")
                 // 该client允许的授权类型authorization_code,password,refresh_token,implicit,client_credentials
                 .scopes("all") //允许的授权范围

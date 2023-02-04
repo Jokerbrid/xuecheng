@@ -52,13 +52,13 @@ Xshell
 
 ​	[支付模块](./doc/projectDoc/pay.md)
 
-​	[验证码模块](./doc/projectDoc/checkcode.md)
+​	[验证码模块](./doc/projectDoc/checkcode.md)       已编写完成
 
 ​	[媒资管理模块](./doc/projectDoc/media.md)
 
-​	[学习中心模块](./doc/projectDoc/learn.md)
+​	[学习中心模块](./doc/projectDoc/learn.md)    已编写完成
 
-​	[登录模块](./doc/projectDoc/auth.md)
+​	[登录模块](./doc/projectDoc/auth.md) 已编写完成
 
 ​	点击查看各各模块的设计。
 
