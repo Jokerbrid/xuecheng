@@ -4,7 +4,7 @@
 
 模块的结构：
 
-![](../img/check_1.jpg)
+![](../../doc/img/check_1.jpg)
 
 
 
@@ -104,66 +104,4 @@ sms服务尚未了解。
 
 邮箱验证过程：
 
-![](../img/checkcode_pic.jpg)
-
-引用依赖：
-
-```xml
-<!--        增加邮箱验证服务-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-<!--        配置redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-```
-
-配置yml文件：
-
-```yml
-#配置 邮箱发送配置：
-  mail:
-    host: smtp.126.com//邮箱服务器
-    username: 邮箱号
-    nickname: //自定义的邮箱昵称
-    #授权码：
-    password: //
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enabled: true
-            required: true
-    protocol: smtp
-```
-
-编写函数：
-
-```java
-    @Value("${spring.mail.username}")
-    private  String fromMail;
-    @Value("${spring.mail.nickname}")
-    private  String nickName;
-    @Autowired
-    private JavaMailSender javaMailSender;
- 
-	public void send(String email,String code) {
-        String message="您的验证码为："+code+"\n";
-
-        SimpleMailMessage simpleMailMessage=new SimpleMailMessage();
-        simpleMailMessage.setFrom(nickName+'<'+fromMail+'>');//自定义昵称
-        simpleMailMessage.setTo(email);//发给谁
-        simpleMailMessage.setSubject("测试邮箱功能");//设置主题
-        simpleMailMessage.setText(message);//内容
-
-        javaMailSender.send(simpleMailMessage);//发送消息
-    }
-```
-
-![](../img/check_emil.jpg)
-
-功能使用正常。
+![](../../doc/img/checkcode_pic.jpg)

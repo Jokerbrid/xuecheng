@@ -49,7 +49,7 @@
 
 实现UserDetailsService 重写该方法，将认证路径指向数据库，返回UserDetails。
 
-![](..\img\auth-spring.png)
+![](../../doc/img/auth-spring.png)
 
 ```java
 //需要继承DaoAuthenticationProvider:
